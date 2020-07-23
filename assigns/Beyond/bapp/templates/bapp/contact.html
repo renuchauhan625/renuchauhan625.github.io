@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% if msg %}
+<center>
+    <h1>{{msg}}</h1>
+</center>
+{% endif %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+
+        <form method="post">
+            {% csrf_token %}
+            <h1>Fill the Following details</h1>
+            <div class="form-group">
+              <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" pattern="\w[a-zA-Z0-9_.]*@(gmail|reddiffmail)[.][a-z]+" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Contact</label>
+                <input type="text" class="form-control" id="phone" pattern="\d{10-11}" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="companyname">Company Name</label>
+            <input type="text" class="form-control" id="companyname" name="cname">
+            </div>
+        <button type="submit" id="b2" class="btn btn-primary">Submit</button>
+
+        </form>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

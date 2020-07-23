@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{% static 'bapp/css/banners.css' %}" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="hero-image" id="img3">
+  <div class="hero-text">
+    <h1>Social Media</h1>
+    <h1>SEO</h1>
+      <h1>Paid Media</h1>
+      <h1>Website Development</h1>
+
+  </div>
+</div>
+ <div class="hero-image" id="about">
+  <div class="hero-text">
+    <h1>Our Organization</h1>
+    <p>If you own a business, have ambitious growth goals, and are looking for an awesome partner to help you measurably improve your marketing performance and get more leads and sales from the web, you’ve come to the right place.</p>
+
+  </div>
+</div>
+<div class="hero-image" id="blg">
+  <div class="hero-text">
+    <h1>MEDIA AND BLOGS</h1>
+    <p>Want to grow your practice? SEO for law firms will do it. In this post, you’ll learn what SEO…</p>
+    <button>GET A FREE ANALYSIS</button>
+  </div>
+</div>
+
+<div class="hero-image" id="contact">
+  <div class="hero-text">
+    <h1>Contact US</h1>
+    <p>Send Us a Message</p>
+    <button  onclick="location.href='{% url 'contact' %}'" id="b1">For More details</button>
+  </div>
+</div>
+
+
+</body>
+</html>
